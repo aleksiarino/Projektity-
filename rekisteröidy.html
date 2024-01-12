@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekisteröidy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+
+<!-- Otsikko         -->
+        <div class="register-div">
+            <div class="title">Luo tunnuksesi  
+            </div>
+<!-- 
+Nimi, sähköposti ja salasana kentät             -->
+            <div class="form">
+              <form action="todo.html">  
+                <div class="nimi"><input type="text" placeholder="Nimi">
+                </div>
+
+                <div class="sähköposti"><input type="text" placeholder="Sähköposti">
+                </div>
+
+                <div class="salasana"><input type="password" id="salasana" placeholder="Salasana">
+                </div>
+<!-- 
+Näytä salasana laatikko                 -->
+                <input type="checkbox" onclick="myFunction()">Näytä salasana
+
+<!-- JS funktio, joka määrittää klikkauksella salasanan näkyväksi                 -->
+                <script>
+
+                function myFunction() {
+                     var x = document.getElementById("salasana");
+                     if (x.type === "password") {
+                        x.type = "text";     
+                 } else {
+                     x.type = "password";
+                 }
+             }                      
+
+                </script>
+
+                <button class="register-nappi">Rekisteröidy</button>
+              </form>  
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

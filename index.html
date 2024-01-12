@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirjaudu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="login-div">
+            <div class="title">Kirjaudu sisään
+            </div>
+<!-- sähköposti kenttä -->
+            <div class="form">
+                <form action="todo.html">
+                <div class="sähköposti">
+                    <input type="text" placeholder="Sähköposti">
+                </div>
+<!-- salasana kenttä -->
+
+                <div class="salasana">
+                <input type="password" id="salasana" placeholder="Salasana"> 
+                </div>
+
+<!--näytä salasana laatikko, javascript funktiolla-->
+
+                 <input type="checkbox" onclick="myFunction()">Näytä salasana 
+
+               <script>
+
+                 function myFunction() {
+                     var x = document.getElementById("salasana");
+                     if (x.type === "password") {
+                        x.type = "text";     
+                 } else {
+                     x.type = "password";
+                 }
+             }  
+            
+                
+               </script> 
+                
+<!-- luo laatikon jonka tarkoitus on muistaa käyttäjän tunnukset -->
+                <div class="muut">
+                    <div class="muista-minut">
+                        <input id="muista-minut" type="checkbox">
+                        <label for="muista-minut">Muista tunnukseni</label>
+                    </div>
+
+<!-- Luo linkin, joka lähettäisi uuden väliaikaisen salasanan                     -->
+                    <div class="forgot-password">
+                        <a href="#">Unohditko salasanasi?</a>
+                    </div>
+                </div>
+<!-- kirjaudu sisään painike -->                
+                <button class="kirjaudu-nappi" input type="submit" value="login-div">Kirjaudu sisään</button>
+            </form>    
+<!-- rekisteröitymislinkki, joka ohjautuu rekisteröinti sivulle             -->
+            <div class="rekisteroidy"><a href="rekisteröidy.html">Ei ole käyttäjää? Rekisteröidy tästä!</a></div>
+         </div>
+
+        </div>
+    </main>
+</body>
+</html>
