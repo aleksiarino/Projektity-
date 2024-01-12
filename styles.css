@@ -1,0 +1,124 @@
+
+body{
+    background-color: rgb(20, 148, 106);
+}
+
+/* kirjaudu sivun, rekisteröinti sivun ja todosivun tyylitiedosto */
+
+.login-div, .register-div, .todo-div{
+    margin: 100px auto;
+    width: 350px;
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px black;
+}
+.title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+}
+.form, .todocontainer{
+    width: 100%;
+    margin-top: 30px;
+}
+.form input, .todocontainer input{
+    font-size: 18px;
+    padding: 10px 20px 10px 5px;
+    border: none;
+    outline: none;
+    background: none;
+}
+.nimi, .sähköposti, .salasana, .todocontainer{
+    display: block;
+    border-radius: 30px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.muut{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-bottom: 30px;
+}
+
+ul li{
+    cursor: pointer;
+    list-style-type:none;
+    font-size: 18px;
+    padding: 10px 5px 10px 5px;
+    background: #eee;
+}
+
+ul li:nth-child(odd) {
+    background: #fff;
+}
+
+ul li:hover{
+    background: #ddd;
+}
+
+ul li.checked{
+    background: #888;
+    text-decoration: line-through;
+    color: #fff;
+}
+
+
+button.kirjaudu-nappi, button.register-nappi{
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: rgb(20, 148, 106);
+    margin-bottom: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.register-nappi{
+    margin-top: 20px;
+}
+
+ .addbtn{
+    display: block;
+    text-align: center;
+    width:100%;
+    font-size: 18px;
+    padding: 12px 10px;
+    border-radius: 30px;
+    background-color: rgb(20, 148, 106);
+    color: #ffffff;
+    cursor: pointer;
+} 
+
+
+.close{
+    float: right;
+    cursor: pointer;
+
+}
+
+.close:hover{
+    background-color: #b61818;
+    color: #fff;
+    padding: 5px;
+}
+button.kirjaudu-nappi:hover, button.register-nappi:hover, .addbtn:hover{
+    background-color: rgb(10, 74, 53);    
+}
+
+.rekisteroidy{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #505050;
+}
+
+
+
