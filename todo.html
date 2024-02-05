@@ -8,34 +8,39 @@
 </head>
 <body>
     <main>
+
+        <form action="index.html">
+        <button type="submit" class="logout">Kirjaudu ulos</button>
+       </form>
+        
        <div class="todo-div"> 
         <div class="title">To Do List</div>
 
         <div class="todocontainer">
-            <input type="text" id="tehtava" placeholder="To do...">
+            <input type="text" id="newTask" placeholder="To do...">
             
         </div>
 
-        <span onclick="uusitehtava()" class="addbtn">Lisää tehtävä</span>
+        <span onclick="addTask()" class="addbtn">Lisää tehtävä</span>
 
 
         <ul id="lista">
-            <li>1</li>
-            <li class="checked">2</li>
-            <li>3</li>
+            <li>Yksi</li>
+            <li class="checked">Kaksi</li>
+            <li>Kolme</li>
         </ul>
 
         <script>
 
 // JS, mikä luo sulje painikkeen jokaisen Li elementin perään
-            var myNodelist = document.getElementsByTagName("LI");
+            var taskItems = document.getElementsByTagName("LI");
             var i;
-            for(i =0; i < myNodelist.length; i++) {
-                var span =document.createElement("SPAN");
-                var txt = document.createTextNode(" \u00D7");
-                span.className = "close";
-                span.appendChild(txt);
-                myNodelist[i].appendChild(span);
+            for(i =0; i < taskItems.length; i++) {
+                var closeButton =document.createElement("SPAN");
+                var closeButtonText = document.createTextNode(" \u00D7");
+                closeButton.className = "close";
+                closeButton.appendChild(closeButtonText);
+                taskItems[i].appendChild(closeButton);
             }
 
 // Kun klikkaa poista painiketta, poistaa li elementin näkyvistä      
@@ -43,30 +48,30 @@
             var i;
             for(i = 0; i< close.length; i++) {
                 close [i].onclick = function() {
-                    var div = this.parentElement;
-                    div.style.display = "none";
+                    var taskElement = this.parentElement;
+                    taskElement.style.display = "none";
                 }
              }
 // JS mikä merkitsee tehtävän "checked" kun klikkaa tehtävää
-            var lista = document.querySelector('ul');
-            lista.addEventListener('click', function(ev) {
+            var taskList = document.querySelector('ul');
+            taskList.addEventListener('click', function(ev) {
                 if (ev.target.tagName === 'LI') {
                     ev.target.classList.toggle ('checked');
                 }
             }, false);
 
 // luo uuden li elementin kun klikkaa "lisää tehtävä"            
-            function uusitehtava() {
+            function addTask() {
                 var li = document.createElement("li");
-                var inputValue = document.getElementById("tehtava").value;
-                var t = document.createTextNode(inputValue);
-                li.appendChild(t);
+                var inputValue = document.getElementById("newTask").value;
+                var textNode = document.createTextNode(inputValue);
+                li.appendChild(textNode);
                 if (inputValue === '') {
                     alert ("Sinun täytyy antaa tehtävä");
                 } else {
-                    document.getElementById("lista").appendChild(li);
+                    document.getElementById("taskList").appendChild(li);
                 }
-                document.getElementById("tehtava").value = "";
+                document.getElementById("newTask").value = "";
 
                 var span = document.createElement("SPAN");
                 var txt = document.createTextNode(" \u00D7");
