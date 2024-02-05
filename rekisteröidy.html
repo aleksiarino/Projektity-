@@ -9,6 +9,10 @@
 <body>
     <main>
 
+        <form action="index.html">
+            <button class="returnbtn">Palaa takaisin</button>
+        </form>
+
 <!-- Otsikko         -->
         <div class="register-div">
             <div class="title">Luo tunnuksesi  
@@ -27,17 +31,17 @@ Nimi, sähköposti ja salasana kentät             -->
                 </div>
 <!-- 
 Näytä salasana laatikko                 -->
-                <input type="checkbox" onclick="myFunction()">Näytä salasana
+                <input type="checkbox" onclick="togglePasswordVisibility()">Näytä salasana
 
 <!-- JS funktio, joka määrittää klikkauksella salasanan näkyväksi                 -->
                 <script>
 
-                function myFunction() {
-                     var x = document.getElementById("salasana");
-                     if (x.type === "password") {
-                        x.type = "text";     
+                function togglePasswordVisibility() {
+                     var passwordInput = document.getElementById("salasana");
+                     if (passwordInput.type === "password") {
+                        passwordInput.type = "text";     
                  } else {
-                     x.type = "password";
+                     passwordInput.type = "password";
                  }
              }                      
 
