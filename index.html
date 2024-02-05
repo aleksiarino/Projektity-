@@ -25,16 +25,16 @@
 
 <!--näytä salasana laatikko, javascript funktiolla-->
 
-                 <input type="checkbox" onclick="myFunction()">Näytä salasana 
+                 <input type="checkbox" onclick="togglePasswordVisibility()">Näytä salasana 
 
                <script>
 
-                 function myFunction() {
-                     var x = document.getElementById("salasana");
-                     if (x.type === "password") {
-                        x.type = "text";     
+                 function togglePasswordVisibility() {
+                     var passwordInput = document.getElementById("salasana");
+                     if (passwordInput.type === "password") {
+                        passwordInput.type = "text";     
                  } else {
-                     x.type = "password";
+                     passwordInput.type = "password";
                  }
              }  
             
