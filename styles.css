@@ -67,6 +67,18 @@ ul li.checked{
     color: #fff;
 }
 
+button.logout, button.returnbtn{
+    font-size: 18px;
+    background-color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 3px 3px 3px black;
+}
+
+button.logout:hover, button.returnbtn:hover{
+    background-color: #888;
+}
 
 button.kirjaudu-nappi, button.register-nappi{
     width: 100%;
